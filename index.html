@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Técnico de Programação Acessível</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Curso Técnico de Programação Acessível</h1>
+        <p>Aprendendo programação com inclusão e acessibilidade.</p>
+    </header>
+
+    <main>
+
+        <section class="cartao">
+
+            <h2>Formulário de Inscrição</h2>
+
+            <img src="./programacao-acessivel.png"
+                 alt="Notebook com códigos de programação, livros e símbolos de acessibilidade, representando a inclusão de pessoas com deficiência na tecnologia." />
+
+            <p>
+                Este formulário tem como objetivo realizar a inscrição
+                de interessados no curso técnico de programação.
+                Preencha seus dados para participar.
+            </p>
+
+            <form action="#" method="post">
+
+                <p>
+                    Os campos identificados com asterisco são obrigatórios.
+                </p>
+
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+
+                    <label for="nome">
+                        Nome completo <span aria-hidden="true">*</span>
+                    </label>
+                    <input type="text" id="nome" name="nome"
+                           placeholder="Digite seu nome"
+                           required minlength="3">
+
+                    <label for="email">
+                        E-mail <span aria-hidden="true">*</span>
+                    </label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Digite seu e-mail"
+                           required>
+
+                    <label for="telefone">
+                        Telefone <span aria-hidden="true">*</span>
+                    </label>
+                    <input type="tel" id="telefone" name="telefone"
+                           placeholder="Digite seu telefone"
+                           required>
+
+                    <label for="cidade">
+                        Cidade <span aria-hidden="true">*</span>
+                    </label>
+                    <input type="text" id="cidade" name="cidade"
+                           placeholder="Digite sua cidade"
+                           required>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Escolha do turno</legend>
+
+                    <p id="instrucao-turno">
+                        Selecione apenas uma opção de turno.
+                        Este campo é obrigatório.
+                    </p>
+
+                    <div class="opcao">
+                        <input type="radio" id="manha" name="turno"
+                               value="Manhã" required>
+                        <label for="manha">Manhã</label>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="radio" id="tarde" name="turno"
+                               value="Tarde">
+                        <label for="tarde">Tarde</label>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="radio" id="noite" name="turno"
+                               value="Noite">
+                        <label for="noite">Noite</label>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Conteúdos de interesse</legend>
+
+                    <p id="instrucao-assuntos">
+                        Você pode selecionar mais de uma opção.
+                    </p>
+
+                    <div class="opcao">
+                        <input type="checkbox" id="python"
+                               name="assuntos" value="Python">
+                        <label for="python">Programação em Python</label>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="checkbox" id="html"
+                               name="assuntos" value="HTML e CSS">
+                        <label for="html">HTML e CSS</label>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="checkbox" id="banco"
+                               name="assuntos" value="Banco de Dados">
+                        <label for="banco">Banco de Dados</label>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="checkbox" id="acessibilidade"
+                               name="assuntos" value="Acessibilidade Digital">
+                        <label for="acessibilidade">Acessibilidade Digital</label>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="checkbox" id="tecnologia"
+                               name="assuntos" value="Tecnologia Assistiva">
+                        <label for="tecnologia">Tecnologia Assistiva</label>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informações sobre acessibilidade</legend>
+
+                    <p>
+                        Informe se você precisa de algum recurso
+                        para acompanhar as aulas.
+                    </p>
+
+                    <label for="recursos">
+                        Quais recursos de acessibilidade você necessita?
+                    </label>
+
+                    <textarea id="recursos" name="recursos"
+                              rows="4"
+                              placeholder="Informe quais recursos você utiliza."></textarea>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Conhecimentos em programação</legend>
+
+                    <label for="experiencia">
+                        Você já possui conhecimentos em programação?
+                        <span aria-hidden="true">*</span>
+                    </label>
+
+                    <select id="experiencia" name="experiencia" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="Nenhum">Nunca programei</option>
+                        <option value="Basico">Conhecimentos básicos</option>
+                        <option value="Intermediario">Conhecimentos intermediários</option>
+                        <option value="Avancado">Conhecimentos avançados</option>
+                    </select>
+
+                </fieldset>
+
+                <button type="submit">Enviar inscrição</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Curso Técnico de Programação Acessível</p>
+        <p>Educação e tecnologia para todos.</p>
+    </footer>
+
+</body>
+</html>
